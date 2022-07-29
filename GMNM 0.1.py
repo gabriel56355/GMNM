@@ -1,4 +1,4 @@
-#GUESS MY NAME MACHINE (SELF MADE IDEA AND NO TUTORIALS)
+#GUESS MY NAME MACHINE 0.1 (SELF MADE IDEA AND NO TUTORIALS)
 name = "gabriel"
 #input
 inputoffind = input("Write a Letter to know where it is located in my name: ")
