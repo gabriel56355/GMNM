@@ -1,6 +1,6 @@
 #GUESS MY NAME MACHINE (SELF MADE IDEA AND NO TUTORIALS)
 name = "gabriel"
-input
+#input
 inputoffind = input("Write a Letter to know where it is located in my name: ")
 #checking if the input is a digit or not
 inputoffind.isdigit()
