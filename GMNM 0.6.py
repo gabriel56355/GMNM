@@ -53,9 +53,8 @@ while True:
     else:
         print("You lost! The correct answer was :", name_choice)
         break
-            
-#After making it only choose one name I want to be able to actually guess the name and win, and I also want to make it have limited tries.
-# I also want to inpliment a better names list. And lastly I'd make it have a UI with ktinker where it reveals the letters you write like hangmanchen and impliment tips aswell
+        
+# I want to inpliment a better names list. And lastly I'd make it have a UI with ktinker where it reveals the letters you write like hangmanchen and impliment tips aswell
 
 #Limited tries CHECK
 #Tries left CHECK
