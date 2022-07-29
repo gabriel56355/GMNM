@@ -1,4 +1,4 @@
-#GUESS MY NAME MACHINE 0.5 (SELF MADE IDEA AND NO TUTORIALS but needed some help from Stackoverflow)
+#GUESS MY NAME MACHINE 0.5 (SELF MADE IDEA AND NO TUTORIALS but had some help from Stackoverflow)
 import random
 
 names = ["Gabriel", "Aaron", "Kiano", "Liam", "Sebastian", "Felix", "Hector", "Lennart", "Tobias", "Vincent"]
