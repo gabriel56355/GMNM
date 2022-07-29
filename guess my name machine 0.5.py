@@ -7,7 +7,7 @@ while True:
     get_out = False             # Used to exit this program gracefully
     name_choice = random.choice(names)
     name_letter_find = random.choice(names) # Acquire the name randomly before performing tests
-    print(name_choice)
+    #print(name_choice)
     guessesList = [] 
 
     for i in range(10):   
