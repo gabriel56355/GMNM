@@ -1,0 +1,119 @@
+So, I've dropped this project due to me being unable to get the output from the terminal and put it into tkinter. The GMNM has been a nice little project for me,
+it was pretty fun to make, but now it's getting tedious. Maybe I'll revisit this project in the future and finally complete it!
+If someone is curious and wants to check out where I left this project off here:
+
+
+#GUESS MY NAME MACHINE 1.0 (NOT FINISHED AND IN A BAD STATE)
+import tkinter as tk
+from PIL import ImageTk, Image
+import random
+
+window = tk.Tk() # instantiate an instance of a window
+window.geometry("1080x800")
+window.title("Guess My Name Machine 1.0")
+im = Image.open("machine.ico")
+ph = ImageTk.PhotoImage(im)
+window.iconphoto(True, ph)
+#entry = tk.Entry(window,
+#              font=("Arial", 30))
+#entry.pack(side=tk.LEFT)
+
+def game():
+
+    names = ["Gabriel", "Aaron", "Kiano", "Liam", "Sebastian", "Felix", "Hector", "Lennart", "Tobias", "Vincent"]
+
+    while True:
+        get_out = False             # Used to exit this program gracefully
+        name_choice = random.choice(names)
+        name_letter_find = random.choice(names) # Acquire the name randomly before performing tests
+        #print(name_choice)
+        guessesList = [] 
+        guesses = 0
+
+        for i in range(10):   
+            inputoffind = input("Write a Letter to know where it is located in the name you've been given: ")
+            print(guessesList)
+            
+            if inputoffind == '0':          # Done with the program
+                get_out = True
+                exit()      
+                
+            #if inputoffind == '1':          # Try another name
+                
+            inputoffind.isdigit()
+    #        print(inputoffind.lower())
+            name_letter_find = name_choice.lower().find(inputoffind.lower())    # Need to make sure both letters are lower case
+            
+    #        print(name_letter_find)
+            if inputoffind.isdigit() == False:
+                if inputoffind.isalpha() == True:
+                    if len(inputoffind) == 1:
+                        if name_letter_find == -1:
+                            print("The Letter that you have picked does not exist in my Name.")
+                            guesses += 1
+                            print("You have ",10 - guesses, " tries left!")
+                            if inputoffind not in guessesList:
+                                guessesList.append(inputoffind)
+                        else:
+                            print("The Letter you have chosen is in spot " ,name_letter_find + 1)
+                            guesses += 1
+                            print("You have ",10 - guesses, " tries left!")
+                            if inputoffind not in guessesList:
+                                guessesList.append(inputoffind)
+                    else:
+                        print("Try Again")
+                        break
+            else:  
+                print("Try Again")
+        final_guess = input("What is the name? : ")
+        if final_guess.lower() == name_choice.lower():
+            print("You Won!")
+            break
+        else:
+            print("You lost! The correct answer was :", name_choice)
+            break
+def close_window():
+   window.destroy()
+#EnterTable = tk.StringVar()
+def Terminal(): #SHOWS OUTPUT??
+    result = window, game()
+    result=tk.Label(window,text=result, justify='left').grid(row=9, column=6)
+
+label1=tk.Label(window, text='Guess My Name Machine', font=30, fg='Black').grid(row=1, column=6)
+label1=tk.Label(window,text='                                         ').grid(row=2,column=6)
+entry5=tk.Entry(window, justify='center').grid(row=3, column=6)
+label1=tk.Label(window,text='                                         ').grid(row=4,column=6)            
+ 
+button1=tk.Button(window, text='PLAY', command=Terminal).grid(row=5,column=6)
+label1=tk.Label(window,text='                                         ').grid(row=6,column=6)        
+QUIT=tk.Button(window,text='Quit', fg='Red', command=window.destroy).grid(row=7,column=6)
+label1=tk.Label(window,text='                                         ').grid(row=8,column=6)        
+result=tk.Label(window, text="Show result by insert a value", justify='left').grid(row=9, column=6)
+label1=tk.Label(window,text='                                         ').grid(row=10,column=6)        
+
+
+
+ 
+
+
+window.mainloop() #place window on computer screen
+            
+# I also want to inpliment a better names list. And lastly I'd make it have a UI with ktinker
+# where it reveals the letters you write like hangmanchen and impliment tips aswell
+
+#Limited tries CHECK
+#Tries left CHECK
+#Name and Win CHECK
+#List for guesses CHECK
+#Only one letter CHECK
+#Get out of Programm with 0 CHECK
+#Try another name (POSTPONED cause of tk)
+
+
+
+
+
+
+
+Summary: This project will not recive anymore updates for a long time.
+See Ya!
